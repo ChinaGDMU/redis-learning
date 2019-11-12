@@ -1,4 +1,4 @@
-package cn.damon.redis.article.config;
+package cn.damon.redis.config;
 
 import cn.damon.redis.utils.JedisUtils;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Import;
  * @Version 1.0
  */
 @Configuration
-@ComponentScan(value = "cn.damon.redis.article.*")
+@ComponentScan(value = "cn.damon.redis.*")
 @Import(JedisUtils.class)
-public class ArticleConfig {
+public class MainConfig {
 }

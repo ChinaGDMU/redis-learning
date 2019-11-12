@@ -41,6 +41,17 @@ public class JedisUtils {
 		}
 	}
 
+	public Object eval(String script, int keyCount, String... params){
+		Jedis resource = pool.getResource();
+		return  resource.eval(script, keyCount, params);
+	}
+
+
+	public Object eval(String script, List<String> keys, List<String> args){
+		Jedis resource = pool.getResource();
+		return  resource.evalsha(resource.scriptLoad(script),keys,args);
+	}
+
 	/**
 	 * 通过key获取储存在redis中的value 并释放连
 	 * 

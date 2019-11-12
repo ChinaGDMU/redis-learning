@@ -1,6 +1,6 @@
 package cn.damon.article;
 
-import cn.damon.redis.article.config.ArticleConfig;
+import cn.damon.redis.config.MainConfig;
 import cn.damon.redis.article.service.ArticleService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +20,7 @@ import java.util.Map;
  * @Version 1.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = ArticleConfig.class)
+@ContextConfiguration(classes = MainConfig.class)
 public class TestArticle {
 
     @Resource
